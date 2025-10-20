@@ -7,6 +7,7 @@ import userRole from "../configs/user.role.js";
 
 const messageRouter = express.Router();
 
-messageRouter.post('/send', verifyToken, allowedto(userRole.USER, userRole.ADMIN) ,createMessage);
+// messageRouter.post('/send', verifyToken, allowedto(userRole.USER, userRole.ADMIN) ,createMessage);
+ messageRouter.post('/send',createMessage);
 messageRouter.get('/messages', verifyToken, allowedto(userRole.ADMIN), listMessages);
 export default messageRouter
