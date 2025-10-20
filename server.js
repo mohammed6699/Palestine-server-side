@@ -11,7 +11,8 @@ const app = express();
 const port = process.env.PORT || 4000;
 
 app.use(cors({
-    origin: ['https://palestine-server-side.vercel.app']
+    origin: ['https://palestine-server-side.vercel.app'],
+    credentials: true,
 }));
 app.get('/', (req, res) => {
     res.send('Server is Running')
