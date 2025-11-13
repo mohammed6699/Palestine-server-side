@@ -11,7 +11,7 @@ const app = express();
 const port = process.env.PORT || 4000;
 
 app.use(cors({
-    origin: ['https://palestine-server-side.vercel.app', 'http://localhost:5173', 'https://palestine-ceremony-mohameds-projects-8a00d38a.vercel.app/'],
+    origin: ['https://palestine-server-side.vercel.app', 'http://localhost:5173', 'https://palestine-ceremony-mohameds-projects-8a00d38a.vercel.app/', 'https://palestine-ceremony.vercel.app'],
     credentials: true,
 }));
 app.get('/', (req, res) => {
